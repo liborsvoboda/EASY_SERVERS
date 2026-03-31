@@ -1,0 +1,19 @@
+﻿[Unit]  
+Description=Dotnet EasyGitServer  
+  
+[Service]  
+ExecStart=dotnet /var/www/EasyGitServer/EasyGitServer.dll "protocol:http" 
+WorkingDirectory=/var/www/EasyGitServer/ 
+User=root  
+Group=root  
+Restart=always
+RestartSec=5  
+SyslogIdentifier=dotnet-EasyGitServer  
+PrivateTemp=true  
+Environment=ASPNETCORE_ENVIRONMENT=Development
+KillSignal=SIGINT
+StandardOutput=file:/var/www/EasyGitServer/Log/standardOutput.log
+StandardError=file:/var/www/EasyGitServer/Log/standardError.log
+
+[Install]  
+WantedBy=multi-user.target  

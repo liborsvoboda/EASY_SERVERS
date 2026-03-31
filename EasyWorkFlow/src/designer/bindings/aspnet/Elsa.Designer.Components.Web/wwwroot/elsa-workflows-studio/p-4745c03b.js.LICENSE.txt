@@ -1,0 +1,5 @@
+/**
+ * axios-middleware v0.4.0
+ * (c) 2023 Émile Bergeron
+ * @license MIT
+ */

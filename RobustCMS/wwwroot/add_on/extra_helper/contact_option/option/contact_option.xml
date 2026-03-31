@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<contact_option_root>
+  <name active="true" />
+  <last_name active="true" />
+  <email active="false" />
+  <title active="false" />
+  <text active="true" />
+  <file active="false" />
+  <type active="false" />
+  <phone_number active="true" />
+  <mobile_number active="true" />
+  <address active="true" />
+  <postal_code active="false" />
+  <about active="false" />
+  <birthday active="false" />
+  <gender active="false" />
+  <country active="false" />
+  <state_or_province active="false" />
+  <city active="false" />
+  <zip_code active="false" />
+  <public_email active="true" />
+  <website active="true" />
+</contact_option_root>

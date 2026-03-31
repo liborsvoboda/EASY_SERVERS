@@ -1,0 +1,40 @@
+﻿@page "/User/Login"
+@model GitServer.Models.LoginModel
+@{
+    ViewBag.Title = "Login";
+}
+
+<div class="user signin">
+    <div class="ui middle very relaxed page grid">
+        <div class="column">
+            <form class="ui form" asp-action="Login" method="post">
+                <h3 class="ui top attached header">
+                    Login
+                </h3>
+                <div class="ui attached segment">
+                    <div class="required inline field ">
+                        <label for="user_name">Login Name</label>
+                        <input id="user_name" name="Username" value="" autofocus required>
+                    </div>
+                    <div class="required inline field ">
+                        <label for="password">Password</label>
+                        <input id="password" name="Password" type="password" value="" required>
+                    </div>
+                    <div class="inline field">
+                        <label></label>
+                        <div class="ui checkbox">
+                            <label>Remember</label>
+                            <input name="remember" type="checkbox">
+                        </div>
+                    </div>
+
+                    <div class="inline field">
+                        <label></label>
+                        <button class="ui teal button">Logon</button>
+                        <a href="/User/Register">New Registration</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

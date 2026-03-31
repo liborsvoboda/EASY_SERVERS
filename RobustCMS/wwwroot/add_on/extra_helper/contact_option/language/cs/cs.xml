@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<add_ons_language_root>
+  <add_ons_language>
+
+    <aktivní_about>aktivní about</aktivní_about>
+    <aktivní_address>aktivní address</aktivní_address>
+    <aktivní_birthday>aktivní birthday</aktivní_birthday>
+    <aktivní_city>aktivní city</aktivní_city>
+    <aktivní_country>aktivní country</aktivní_country>
+    <aktivní_email>aktivní email</aktivní_email>
+    <aktivní_file>aktivní file</aktivní_file>
+    <aktivní_gender>aktivní gender</aktivní_gender>
+    <aktivní_last_name>aktivní last name</aktivní_last_name>
+    <aktivní_mobile_number>aktivní mobile number</aktivní_mobile_number>
+    <aktivní_name>aktivní name</aktivní_name>
+    <aktivní_phone_number>aktivní phone number</aktivní_phone_number>
+    <aktivní_postal_code>aktivní postal code</aktivní_postal_code>
+    <aktivní_public_email>aktivní public email</aktivní_public_email>
+    <aktivní_state_or_province>aktivní state or province</aktivní_state_or_province>
+    <aktivní_text>aktivní text</aktivní_text>
+    <aktivní_title>aktivní title</aktivní_title>
+    <aktivní_type>aktivní type</aktivní_type>
+    <aktivní_website>aktivní website</aktivní_website>
+    <aktivní_zip_code>aktivní zip code</aktivní_zip_code>
+    <contact_option>contact option</contact_option>
+    <contact_option_was_save>contact option was save</contact_option_was_save>
+    <save_contact_option>save contact option</save_contact_option>
+
+  </add_ons_language>
+</add_ons_language_root>

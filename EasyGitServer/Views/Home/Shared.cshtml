@@ -1,0 +1,23 @@
+﻿@using System.Collections.Generic
+@model IEnumerable<GitServer.ApplicationCore.Models.Repository>
+@{
+    ViewBag.Title = "Shared Repositories";
+}
+<h2 class="ui header">Shared Repository List</h2>
+<div class="ui relaxed divided list">
+    @foreach (var repo in Model)
+    {
+        <div class="item">
+            <i class="large github middle aligned icon"></i>
+            <div class="content">
+                <div class="d-flex">
+                    @Html.RouteLink(repo.Name, "GetRepositoryHomeView", new { userName = repo.UserName, repoName = repo.Name }, new { @class = "header medium ui" })
+                </div>  
+
+                <div class="description">@repo.Description</div>
+                <div class="description">Is Private only: @repo.IsPrivate </div>
+                <div class="description">Updated @repo.UpdateTime</div>
+            </div>
+        </div>
+    }
+</div>

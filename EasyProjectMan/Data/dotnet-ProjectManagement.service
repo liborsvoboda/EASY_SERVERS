@@ -1,0 +1,19 @@
+﻿[Unit]  
+Description=Dotnet ProjectManagement  
+  
+[Service]  
+ExecStart=dotnet /var/www/ProjectManagement/ProjectManagement.dll "protocol:http" 
+WorkingDirectory=/var/www/ProjectManagement/ 
+User=root  
+Group=root  
+Restart=always
+RestartSec=5  
+SyslogIdentifier=dotnet-ProjectManagement  
+PrivateTemp=true  
+Environment=ASPNETCORE_ENVIRONMENT=Development
+KillSignal=SIGINT
+StandardOutput=file:/var/www/ProjectManagement/Log/standardOutput.log
+StandardError=file:/var/www/ProjectManagement/Log/standardError.log
+
+[Install]  
+WantedBy=multi-user.target  

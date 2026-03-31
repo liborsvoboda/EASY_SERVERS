@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "Fast Help";
+
+    string currRepo = (string)ViewContext.RouteData.Values["repoName"];
+    string currUser = (string)ViewContext.RouteData.Values["userName"];
+    string currId = (string)ViewContext.RouteData.Values["id"];
+    var request = ViewContext.HttpContext.Request;
+    var giturl = $"{request.Scheme}://{request.Host}/{currUser}/{currRepo}.git";
+}
+<div class="ui clearing segment">
+    <h3 class="ui left floated header">@currUser / @currRepo</h3>
+</div>
+<div class="ui container">
+    <div class="ui grid">
+        <div class="sixteen wide column content">
+            <h4 class="ui top attached header">
+                Fast Help
+            </h4>
+            <div class="ui attached guide table segment">
+                <div class="item">
+                    <h3>
+                        Clone actual repository <small>
+                            for Help <a href="http://git-scm.com/book/en/Git-Basics-Getting-a-Git-Repository" rel="nofollow" target="_blank"> Click Here</a>
+                        </small>
+                    </h3>
+                    <div class="ui fluid action small input">
+                        <button class="ui basic clone button blue" id="repo-clone-https" data-link="@giturl">
+                            HTTP
+                        </button>
+                        <input id="giturl" type="text" value="@giturl" readonly>
+                        <button class="ui teal right labeled icon button" onclick="navigator.clipboard.writeText($('#giturl').val());"><i class="copy icon"></i> Copy</button>
+                    </div>
+                </div>
+                <div class="ui divider"></div>
+
+                <div class="item">
+                    <h3>
+                        Create Clone from command Line
+                    </h3>
+                    <div class="markdown">
+                        <pre><code>touch README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin <span class="clone-url">@giturl</span>
+git push -u origin master</code></pre>
+                    </div>
+                </div>
+                <div class="ui divider"></div>
+
+                <div class="item">
+                    <h3>Push to REPOSITORY FROM Command Line</h3>
+                    <div class="markdown">
+                        <pre><code>git remote add origin <span class="clone-url">@giturl</span>
+git push -u origin master</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

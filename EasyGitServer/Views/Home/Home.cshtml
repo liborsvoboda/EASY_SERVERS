@@ -1,0 +1,32 @@
+﻿@using System.Collections.Generic
+@model IEnumerable<GitServer.ApplicationCore.Models.Repository>
+@{
+    ViewBag.Title = "Home";
+}
+<h2 class="ui header">Repository List</h2>
+<div class="right">
+    <a href="/Home/Create">
+        <button class="ui teal right labeled icon button"><i class="right arrow icon"></i>Create New Repository</button>
+    </a>
+</div>
+<div class="ui relaxed divided list">
+    @foreach (var repo in Model)
+    {
+        <div class="item">
+            <i class="large github middle aligned icon"></i>
+            <div class="content">
+                <form asp-action="Delete" id="delete_@repo.ID" method="post" class="ui form">
+                    <input type="hidden" name="id" value="@repo.ID">
+                    <div class="d-flex">
+                        @Html.RouteLink(repo.Name, "GetRepositoryHomeView", new { userName = repo.UserName, repoName = repo.Name }, new { @class = "header medium ui" })
+                        <span onclick="$('#delete_' + @repo.ID).submit()" class="mif-cancel pl-2 pt-1 fg-red c-pointer" title="Delete"></span>
+                    </div>  
+                </form>
+
+                <div class="description">@repo.Description</div>
+                <div class="description">Is Private only: @repo.IsPrivate </div>
+                <div class="description">Updated @repo.UpdateTime</div>
+            </div>
+        </div>
+    }
+</div>

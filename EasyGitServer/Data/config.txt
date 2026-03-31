@@ -1,0 +1,1 @@
+Server=127.0.0.1\SQLEXPRESS,1433;Database=EasyGitServer;Trusted_Connection=True;TrustServerCertificate=True

@@ -1,0 +1,17 @@
+<script>
+async function el_GetUserIP()
+{
+  try
+  {
+    const response = await fetch("https://api.ipify.org?format=json");
+    const data = await response.json();
+    document.getElementById("div_UserIp").innerHTML = "$_lang your_ip_address;: " + data.ip;
+  }
+  catch (error)
+  {
+    document.getElementById("div_UserIp").innerHTML = "$_lang error;: " + error;
+  }
+}
+el_GetUserIP();
+</script>
+<div id="div_UserIp"></div>

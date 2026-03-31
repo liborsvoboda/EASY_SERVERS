@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+  
+  <!--<PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>GS_PORTAL_NugetServer</RootNamespace>
+    <RuntimeIdentifiers>win-x64</RuntimeIdentifiers>
+    <ContainerRuntimeIdentifier>win-x64</ContainerRuntimeIdentifier>
+    <ContainerBaseImage>mcr.microsoft.com/dotnet/aspnet:8.0-nanoserver-1809</ContainerBaseImage>
+    <EnableSdkContainerDebugging>True</EnableSdkContainerDebugging>
+    <UserSecretsId>bbfa8a21-e899-4192-a8dd-0aa28f7b4d73</UserSecretsId>
+    <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
+  </PropertyGroup>-->
+
+  <ItemGroup>
+    <ContainerPort Include="8080" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="McMaster.Extensions.CommandLineUtils" Version="4.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="8.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="BaGetter.Aliyun" Version="1.5.0" />
+    <PackageReference Include="BaGetter.Aws" Version="1.5.0" />
+    <PackageReference Include="BaGetter.Azure" Version="1.5.0" />
+    <PackageReference Include="BaGetter.Core" Version="1.5.0" />
+    <PackageReference Include="BaGetter.Database.MySql" Version="1.5.0" />
+    <PackageReference Include="BaGetter.Database.PostgreSql" Version="1.5.0" />
+    <PackageReference Include="BaGetter.Database.Sqlite" Version="1.5.0" />
+    <PackageReference Include="BaGetter.Database.SqlServer" Version="1.5.0" />
+    <PackageReference Include="BaGetter.Gcp" Version="1.5.0" />
+    <PackageReference Include="BaGetter.Protocol" Version="1.5.0" />
+    <PackageReference Include="BaGetter.Tencent" Version="1.5.0" />
+    <PackageReference Include="BaGetter.Web" Version="1.5.0" />
+  </ItemGroup>
+
+</Project>

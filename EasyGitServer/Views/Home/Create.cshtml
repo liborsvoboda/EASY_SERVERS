@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "New GitDbRepository";
+}
+
+<h2 class="ui header">New Repository</h2>
+@if (Model != null)
+{
+    <div class="ui negative message">
+        <i class="close icon"></i>
+        <div class="header">@Model</div>
+    </div>
+}
+<div>
+    <form asp-route="Create" method="post" class="ui form">
+        <div class="field">
+            <label>
+                Repository Name
+            </label>
+            <input type="text" name="name" placeholder="repository name" required autofocus>
+        </div> 
+        <div class="field">
+            <label title="if is disabled repository is shared for Server Users">
+                Is Private
+            </label>
+            <input type="checkbox" name="isPrivate" checked autofocus>
+        </div>
+        <div class="field">
+            <label title="if is enabled repopsitory is Public">
+                Available for Public
+            </label>
+            <input type="checkbox" name="isMirror" autofocus>
+        </div>
+        <div class="field">
+            <label>
+                Description
+            </label>
+            <input type="text" name="description" placeholder="Description">
+        </div>
+@*         <div class="field">
+            <label>Remote Url</label>
+            <input type="text" name="remoteurl" placeholder="remote url for clone, is optional">
+        </div> *@
+        <button class="ui button" type="submit">Create</button>
+    </form>
+</div>
+

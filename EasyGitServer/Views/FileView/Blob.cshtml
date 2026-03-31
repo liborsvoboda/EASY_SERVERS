@@ -1,0 +1,29 @@
+@using GitServer.Extensions
+@using GitServer.Models
+@using GitServer.SyntaxHighlighing
+@model BlobModel
+
+@{
+	ViewBag.Title = Model.Name;
+}
+<a class="item" href="#" onclick="window.location.href= window.location.href.replace('/blob/','/tree/').replace('/@System.IO.Path.GetFileName(Model.Path)','')">Back</a>
+
+<link rel="stylesheet" href="/js/highlight/styles/foundation.css">
+<script src="/js/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+@if(Model.IsBinary)
+{
+	<p>This file is binary and cannot be displayed.</p>
+}
+else
+{
+    <pre>@Model.Content</pre> 
+    //Html.HighlightCode(Model.Content, Highlighter.FromExtension(System.IO.Path.GetExtension(Model.Name)), "code");
+}
+<script>
+    $(document).ready(function () {
+        $('pre').each(function (i, block) {
+            hljs.highlightBlock(block);
+        });
+    });
+</script>
