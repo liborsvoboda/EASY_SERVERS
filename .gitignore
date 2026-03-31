@@ -31,3 +31,4 @@ _ReSharper*/
 .vs/
 #Nuget packages folder
 packages/
+/EasyWorkFlow/src/designer/elsa-workflows-studio/src/modules/elsa-webhooks/components/screens/webhook-definition-editor/elsa-webhook-definition-editor-notifications/elsa-webhook-definition-editor-notifications.tsx
